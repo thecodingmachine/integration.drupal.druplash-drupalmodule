@@ -3,7 +3,7 @@
     "description": "This is the Drupal module used by Druplash, the MVC framework for Drupal",
     "keywords": ["drupal", "mvc", "splash", "mouf"],
     "homepage": "https://github.com/thecodingmachine/integration.drupal.druplash-drupalmodule",
-    "type": "drupal-plugin",
+    "type": "drupal-module",
     "license": "MIT",
     "authors": [
         {
