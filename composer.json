@@ -1,0 +1,22 @@
+{
+    "name": "mouf/integration.drupal.druplash-drupalmodule",
+    "description": "This is the Drupal module used by Druplash, the MVC framework for Drupal",
+    "keywords": ["drupal", "mvc", "splash", "mouf"],
+    "homepage": "https://github.com/thecodingmachine/integration.drupal.druplash-drupalmodule",
+    "type": "drupal-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Négrier",
+            "email": "d.negrier@thecodingmachine.com",
+            "homepage": "http://mouf-php.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.3.0",
+        "composer/installers": "*"
+    },
+    "extra": {
+        "installer-name": "druplash"
+    }
+}
