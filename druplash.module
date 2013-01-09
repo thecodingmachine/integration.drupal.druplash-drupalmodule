@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__).'/../../../../Mouf.php';
+require_once dirname(__FILE__).'/../../../../mouf/Mouf.php';
 
 
 function druplash_permission() {
