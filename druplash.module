@@ -1,6 +1,7 @@
 <?php
 require_once dirname(__FILE__).'/../../../../mouf/Mouf.php';
 
+use Mouf\Integration\Drupal\Druplash\Druplash;
 
 function druplash_permission() {
 	return Druplash::getPermissions();
