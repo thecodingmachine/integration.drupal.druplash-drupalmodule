@@ -41,15 +41,21 @@ function druplash_execute_action($actions) {
 
 /**
  * The hook called to dynamically add blocks to Drupal.
+ * 
+ * @param $op
+ * @param $delta
+ * @param $edit
  */
-function druplash_block_info() {
-	return Druplash::getDrupalBlocks();
+function druplash_block($op = 'list', $delta = 0, $edit = array()) {
+	if ($op == 'list') {
+		return Druplash::getDrupalBlocks();
+	} elseif ($op == 'configure') {
+		// Do nothing
+	} elseif ($op == 'save') {
+		// Do nothing
+	} elseif ($op == 'view') {
+		return Druplash::getDrupalBlock($delta);
+	}
 }
 
-/**
- * The hook called to dynamically get the content of a block.
- */
-function druplash_block_view($delta = '') {
-	return Druplash::getDrupalBlock($delta);
-}
 ?>
