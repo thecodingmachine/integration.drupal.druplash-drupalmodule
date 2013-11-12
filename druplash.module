@@ -3,6 +3,10 @@ require_once dirname(__FILE__).'/../../../../mouf/Mouf.php';
 
 use Mouf\Integration\Drupal\Druplash\Druplash;
 
+// Let's define the ROOT_URL constant
+define('ROOT_URL', base_path());
+define('MOUF_URL', ROOT_URL.'vendor/mouf/mouf/');
+
 function druplash_permission() {
 	return Druplash::getPermissions();
 }
