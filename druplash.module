@@ -1,14 +1,12 @@
 <?php
 require_once dirname(__FILE__).'/../../../../mouf/Mouf.php';
 
-use Mouf\Integration\Drupal\Druplash\Druplash;
-
 // Let's define the ROOT_URL constant
 define('ROOT_URL', base_path());
 define('MOUF_URL', ROOT_URL.'vendor/mouf/mouf/');
 
 function druplash_permission() {
-	return Druplash::getPermissions();
+	return Mouf::getDruplash()->getPermissions();
 }
 
 /**
@@ -17,7 +15,7 @@ function druplash_permission() {
  * 
  */
 function druplash_user_login($edit, $account) {
-	Druplash::onUserLogin($edit, $account);
+	Mouf::getDruplash()->onUserLogin($edit, $account);
 }
 
 /**
@@ -26,7 +24,7 @@ function druplash_user_login($edit, $account) {
  * 
  */
 function druplash_user_logout($account) {
-	Druplash::onUserLogout($account);
+	Mouf::getDruplash()->onUserLogout($account);
 }
 
 /**
@@ -36,24 +34,24 @@ function druplash_user_logout($account) {
  */
 function druplash_menu() {
 	// Let's find the Drupal Controllers.
-	return Druplash::getDrupalMenus();
+	return Mouf::getDruplash()->getDrupalMenus();
 }
 
 function druplash_execute_action($actions) {
-	return Druplash::executeAction($actions);
+	return Mouf::getDruplash()->executeAction($actions);
 }
 
 /**
  * The hook called to dynamically add blocks to Drupal.
  */
 function druplash_block_info() {
-	return Druplash::getDrupalBlocks();
+	return Mouf::getDruplash()->getDrupalBlocks();
 }
 
 /**
  * The hook called to dynamically get the content of a block.
  */
 function druplash_block_view($delta = '') {
-	return Druplash::getDrupalBlock($delta);
+	return Mouf::getDruplash()->getDrupalBlock($delta);
 }
 ?>
